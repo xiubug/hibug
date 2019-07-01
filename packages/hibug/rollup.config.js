@@ -4,7 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 const config = {
-    input: './src/main.js',
+    input: './src/index.js',
     output: {
         file: './dist/hibug.js',
         format: 'umd',

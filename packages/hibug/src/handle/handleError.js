@@ -1,7 +1,7 @@
 import { isEqual } from 'lodash';
-import getBaseInfo from '../info/getBaseInfo';
 import debounce from 'shared/debounce';
 import print from 'shared/print';
+import getBaseInfo from '../info/getBaseInfo';
 import report from './report';
 
 // 储存所有报错信息

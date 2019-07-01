@@ -1,10 +1,10 @@
-import { getError, reportInfo, caughtError } from './lib/caught/getError';
-import getHttpRequestError from './lib/caught/getHttpRequestError';
-import report from './lib/handle/report';
-import { errorList } from './lib/handle/handleError';
-import { getPerformance, getResource } from './lib/info/getPerformance';
-import getUV from './lib/info/getUV';
-import getBaseInfo from './lib/info/getBaseInfo';
+import { getError, reportInfo, caughtError } from './info/getError';
+import getHttpRequestError from './info/getHttpRequestError';
+import report from './handle/report';
+import { errorList } from './handle/handleError';
+import { getPerformance, getResource } from './info/getPerformance';
+import getUV from './info/getUV';
+import getBaseInfo from './info/getBaseInfo';
 
 const listener = window.addEventListener;
 function _init() {

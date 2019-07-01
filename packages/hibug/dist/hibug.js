@@ -2361,32 +2361,6 @@
 
   var isEqual_1 = isEqual;
 
-  /**
-   * getBaseInfo
-   * 获取用户名、ID、时间戳、其他自定义信息等
-   *
-   * @returns {Object}
-   * @private
-   */
-  function getBaseInfo() {
-    var config = window.$HibugConfig;
-    var date = new Date();
-    var time = "".concat(date.getFullYear(), "\u5E74").concat(date.getMonth() + 1, "\u6708").concat(date.getDate(), "\u65E5").concat(date.getHours(), "\u65F6").concat(date.getMinutes(), "\u5206").concat(date.getSeconds(), "\u79D2");
-    var result = {
-      time: time,
-      userAgent: window.navigator.userAgent,
-      url: window.location.href,
-      title: document.title,
-      preUrl: document.referrer && document.referrer !== window.location.href ? document.referrer : ''
-    };
-
-    if (config === null || config === void 0 ? void 0 : config.others) {
-      result = _objectSpread({}, result, config.others);
-    }
-
-    return result;
-  }
-
   let timer;
 
   function debounce(func, delay) {
@@ -2417,6 +2391,32 @@
     list.forEach(item => {
       type === item.type && console[item.msg](`%c${item.msg}`, item.style, info); // eslint-disable-line
     });
+  }
+
+  /**
+   * getBaseInfo
+   * 获取用户名、ID、时间戳、其他自定义信息等
+   *
+   * @returns {Object}
+   * @private
+   */
+  function getBaseInfo() {
+    var config = window.$HibugConfig;
+    var date = new Date();
+    var time = "".concat(date.getFullYear(), "\u5E74").concat(date.getMonth() + 1, "\u6708").concat(date.getDate(), "\u65E5").concat(date.getHours(), "\u65F6").concat(date.getMinutes(), "\u5206").concat(date.getSeconds(), "\u79D2");
+    var result = {
+      time: time,
+      userAgent: window.navigator.userAgent,
+      url: window.location.href,
+      title: document.title,
+      preUrl: document.referrer && document.referrer !== window.location.href ? document.referrer : ''
+    };
+
+    if (config === null || config === void 0 ? void 0 : config.others) {
+      result = _objectSpread({}, result, config.others);
+    }
+
+    return result;
   }
 
   var reg = /^(https?:\/\/)?(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(.+)?$/;
