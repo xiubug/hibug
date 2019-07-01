@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "hibug-packages",
+	"version": "0.0.8",
+  "workspaces": [
+    "fixtures/*",
+    "packages/*"
+  ]
+}

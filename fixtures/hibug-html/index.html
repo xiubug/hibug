@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/hibug"></script>
+    <script>
+        Hibug.init({
+            report(errorList) {
+                // 上传错误至服务端
+                console.log(errorList);
+            }
+        })
+    </script>
+</head>
+<body>
+    <h2>错误捕获</h2>
+</body>
+</html>

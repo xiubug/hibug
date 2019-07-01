@@ -1,0 +1,64 @@
+{
+  "name": "hibug",
+  "version": "0.1.1",
+  "description": "A library for collecting front-end error log.",
+  "main": "dist/hibug.min.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c && rollup -c --compress",
+    "lint": "eslint ./src",
+    "test": "jest",
+    "codecov": "codecov",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "prepublish": "yarn build && yarn lint && yarn test && yarn codecov"
+  },
+  "keywords": [
+    "debugger",
+    "js",
+    "bug"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosout/hibug.git"
+  },
+  "author": "Wei Changhua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sosout/hibug/issues"
+  },
+  "homepage": "https://github.com/sosout/hibug#readme",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "body-parser": "^1.19.0",
+    "codecov": "^3.5.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "jest": "^24.8.0",
+    "rollup": "^1.16.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.1.0",
+    "rollup-plugin-terser": "^5.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
