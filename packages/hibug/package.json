@@ -1,6 +1,6 @@
 {
   "name": "hibug",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library for collecting front-end error log.",
   "main": "dist/hibug.min.js",
   "files": [
@@ -59,6 +59,7 @@
     "rollup-plugin-terser": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "shared": "0.0.0"
   }
 }
