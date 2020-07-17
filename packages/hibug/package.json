@@ -59,7 +59,7 @@
     "rollup-plugin-terser": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "shared": "0.0.0"
   }
 }
